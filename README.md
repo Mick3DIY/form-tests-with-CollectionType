@@ -17,7 +17,7 @@ Required :
 
 
 - Form class (src/Form/UserType.php) :
-    - roles with CollectionType and ChoiceType classes
+    - roles with CollectionType and ChoiceType classes **with double choices : BUG !?**
 
 
 - Unique controller (src/Controller/DefaultController.php) :

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Form {{ controller_name }}{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h1>Form test with {{ controller_name }}</h1>
+        {{ form_start(form) }}
+        {{ form_row(form.username) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.password) }}
+        {{ form_row(form.roles) }}
+        <div>
+            {{ form_widget(form.save, {'label': label_name, 'attr': {'title': label_name}}) }}&nbsp;
+            <a href="{{ path('app_default') }}" title="Cancel">Cancel</a>
+        </div>
+        {{ form_rest(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

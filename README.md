@@ -42,8 +42,12 @@ php -S localhost:8000 -t public
 
 Sources : 
 
-    - Security : https://symfony.com/doc/current/security.html
-    - Form : https://symfony.com/doc/current/forms.html
-    - CollectionType field : https://symfony.com/doc/current/reference/forms/types/collection.html
-    - ChoiceType field : https://symfony.com/doc/current/reference/forms/types/choice.html
-    - The Difference between Data Transformers and Mappers : https://symfony.com/doc/current/form/data_mappers.html#the-difference-between-data-transformers-and-mappers
+Security : https://symfony.com/doc/current/security.html
+
+Form : https://symfony.com/doc/current/forms.html
+
+CollectionType field : https://symfony.com/doc/current/reference/forms/types/collection.html
+
+ChoiceType field : https://symfony.com/doc/current/reference/forms/types/choice.html
+
+The Difference between Data Transformers and Mappers : https://symfony.com/doc/current/form/data_mappers.html#the-difference-between-data-transformers-and-mappers

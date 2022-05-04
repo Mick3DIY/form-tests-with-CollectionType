@@ -23,7 +23,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string', length: 180, unique: true)]
     private $username;
 
-    #[ORM\Column(type: 'json')]
+    #[ORM\Column(type: 'array')]
     private $roles = [];
 
     #[ORM\Column(type: 'string')]
@@ -68,7 +68,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = User::USER_DEFAULT;
+        if (empty($roles)) {
+            $roles[] = User::USER_DEFAULT;
+        }
         return array_unique($roles);
     }
 

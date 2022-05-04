@@ -21,7 +21,7 @@ class UserFixtures extends Fixture
             $user = new User();
             $user->setUsername($name . $rdInt)
                 ->setEmail($name . $rdInt . '@example.net')
-                ->setRoles([User::USER_DEFAULT, User::USER_ADMIN_APP])
+                ->setRoles([User::USER_ADMIN_APP])
                 ->setPassword('PassW0rd');
             $manager->persist($user);
         }

@@ -18,14 +18,7 @@ class UserType extends AbstractType
             User::USER_ADMIN_APP => 'App. Admin',
             User::USER_ADMIN_PROJECT => 'Project Admin',
             User::USER_ADMIN => 'Administrator'];
-// With multiple choice, its work but with all the choice :(
-//        $builder->add('username')
-//            ->add('roles', ChoiceType::class, [
-//                'label' => 'Roles', 'required' => true,
-//                'choices' => array_flip($roles),
-//                'multiple' => true, 'expanded' => false
-//            ])
-        //Try with one listbox WITH only one choice
+        //With one listbox WITH only one choice
         $builder->add('username')
             ->add('roles', CollectionType::class, [
                 'label' => 'Roles', 'required' => true, 'entry_type' => ChoiceType::class,
